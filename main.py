@@ -10,4 +10,13 @@ from collections import defaultdict
 from io import StringIO
 from PIL import Image
 sys.path.append("..")
+from object_detection.utils import label_map_util
+from object_detection.utils import visualization_utils as vis_util
+
+MODEL = 'ssd_mobilenet_v1_coco_11_06_2017'
+PATH = MODEL + '/frozen_inference_graph.pb'
+PATH_LABEL = os.path.join('data','mscoco_label_map.pbtxt')
+NUM_CLASSES = 90
+
+
  
